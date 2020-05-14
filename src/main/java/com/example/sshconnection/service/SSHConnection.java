@@ -156,7 +156,7 @@ public class SSHConnection {
 
         	List<String> uniqueUserList = new ArrayList<>();
         	Set<String> uniqueUsers = new HashSet<>();
-            String userCapturePattern = "([^\\/])+$";
+            String userCapturePattern = "([^\\/\n])+$";
             Pattern p = Pattern.compile(userCapturePattern, Pattern.MULTILINE);
             Matcher m = p.matcher(commandExecutionResult);
             while(m.find()) {
